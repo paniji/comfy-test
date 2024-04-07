@@ -19,7 +19,7 @@ def queue_prompt(prompt_workflow):
 
     p = {"prompt": prompt_workflow}
     data = json.dumps(p).encode('utf-8')
-    req =  request.Request(COMFY, data=data)
+    req =  request.Request("https://toe-subsequent-fuel-originally.trycloudflare.com", data=data)
     request.urlopen(req)  
 # ======================================================================
 
