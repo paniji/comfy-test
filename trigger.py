@@ -15,10 +15,12 @@ def queue_prompt(prompt_workflow):
     # Get the value of an environment variable
     COMFY = os.environ.get('COMFY')
 
+    print(COMFY)
+
     p = {"prompt": prompt_workflow}
     data = json.dumps(p).encode('utf-8')
     req =  request.Request(COMFY, data=data)
-    request.urlopen(req)    
+    request.urlopen(req)  
 # ======================================================================
 
 # read workflow api data from file and convert it into dictionary 
