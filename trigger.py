@@ -15,13 +15,16 @@ def queue_prompt(prompt_workflow):
   # Get the value of an environment variable
   COMFY = os.environ.get('COMFY')
 
+  print("Using Comfy URL: ", COMFY)
+
   p = {"prompt": prompt_workflow}
   data = json.dumps(p).encode('utf-8')
 
   # Get the value of an environment variable
   session = requests.Session()
   session.verify = True
-  test = session.post(url=COMFY + '/prompt', data=data)
+  comfy_url = COMFY + '/prompt'
+  test = session.post(url=comfy_url, data=data)
   print(test)
 # ======================================================================
 
