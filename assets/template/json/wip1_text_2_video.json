@@ -1,0 +1,171 @@
+{
+  "3": {
+    "inputs": {
+      "text": "(Masterpiece, best quality:1.2), close up, happy face, same cloth, consistent background, clear face details Natural light, A radiant dreamyvibes artstyle moonlight bathes an old cobblestone village, its chimneys puffing gentle smoke, sharp, highly detailed, ultra hyper realistic, 4K, vibrant, Envision a scene where a little girl is walking on the streets, pixar style, its chimneys puffing gentle smoke, high quality, 4K, pixar character, pixar style, (best quality), (masterpiece), (best lighting), (high detailed skin:1.0),( detailed eyes), 8k uhd, dslr, soft lighting, best quality, film grain, Fujifilm XT3",
+      "clip": [
+        "103",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "(bad quality, worst quality:1.2), NSFW, nude, noisy, blurry, deformed, black and white, bad anatomy, Deformed, bad eyes, crossed eyes, disfigured, poorly drawn face, mutation, ((extra limb)), ugly, poorly drawn hands, missing limb, floating limbs, disconnected limbs, malformed hands, out of focus, long neck, long body, ((((mutated hands and fingers)))), (((out of frame))), cropped, low-res, ugly, too many fingers, grainy, extra limbs, extra fingers, mutated hands, bad proportions, blind, ugly eyes, text, writing, logo",
+      "clip": [
+        "103",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "seed": 44444444,
+      "steps": 30,
+      "cfg": 7.5,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "93",
+        0
+      ],
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "6",
+        0
+      ],
+      "latent_image": [
+        "100",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "10": {
+    "inputs": {
+      "samples": [
+        "7",
+        0
+      ],
+      "vae": [
+        "102",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "93": {
+    "inputs": {
+      "model_name": "animatediffMotion_sdxlV10Beta.ckpt",
+      "beta_schedule": "linear (AnimateDiff-SDXL)",
+      "motion_scale": 1,
+      "apply_v2_models_properly": false,
+      "model": [
+        "103",
+        0
+      ],
+      "context_options": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "ADE_AnimateDiffLoaderWithContext",
+    "_meta": {
+      "title": "AnimateDiff Loader [Legacy] 🎭🅐🅓①"
+    }
+  },
+  "94": {
+    "inputs": {
+      "context_length": 16,
+      "context_stride": 1,
+      "context_overlap": 4,
+      "context_schedule": "uniform",
+      "closed_loop": false,
+      "fuse_method": "flat",
+      "use_on_equal_length": false,
+      "start_percent": 0,
+      "guarantee_steps": 1
+    },
+    "class_type": "ADE_AnimateDiffUniformContextOptions",
+    "_meta": {
+      "title": "Context Options◆Looped Uniform 🎭🅐🅓"
+    }
+  },
+  "100": {
+    "inputs": {
+      "width": 1000,
+      "height": 512,
+      "batch_size": 26
+    },
+    "class_type": "ADE_EmptyLatentImageLarge",
+    "_meta": {
+      "title": "Empty Latent Image (Big Batch) 🎭🅐🅓"
+    }
+  },
+  "101": {
+    "inputs": {
+      "frame_rate": 8,
+      "loop_count": 0,
+      "filename_prefix": "AnimateDiff",
+      "format": "video/h264-mp4",
+      "pix_fmt": "yuv420p",
+      "crf": 19,
+      "save_metadata": true,
+      "pingpong": false,
+      "save_output": true,
+      "images": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "VHS_VideoCombine",
+    "_meta": {
+      "title": "Video Combine 🎥🅥🅗🅢"
+    }
+  },
+  "102": {
+    "inputs": {
+      "ckpt_name": "wildcardxXLANIMATION.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "103": {
+    "inputs": {
+      "lora_name": "Dreamyvibes artstyle SDXL - Trigger with dreamyvibes artstyle.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1,
+      "model": [
+        "102",
+        0
+      ],
+      "clip": [
+        "102",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  }
+}
