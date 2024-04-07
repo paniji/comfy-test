@@ -2,25 +2,27 @@
 # For full license text, see https://opensource.org/licenses/MIT
 
 import json
-from urllib import request, parse
+#from urllib import request, parse
 import random
 import os
-
+import requests
 # ======================================================================
 # This function sends a prompt workflow to the specified URL 
 # (http://127.0.0.1:8188/prompt) and queues it on the ComfyUI server
 # running at that address.
 def queue_prompt(prompt_workflow):
 
-    # Get the value of an environment variable
-    COMFY = os.environ.get('COMFY')
+  # Get the value of an environment variable
+  COMFY = os.environ.get('COMFY')
 
-    print("Comfy URL", COMFY)
+  p = {"prompt": prompt_workflow}
+  data = json.dumps(p).encode('utf-8')
 
-    p = {"prompt": prompt_workflow}
-    data = json.dumps(p).encode('utf-8')
-    req =  request.Request("https://toe-subsequent-fuel-originally.trycloudflare.com", data=data)
-    request.urlopen(req)  
+  # Get the value of an environment variable
+  session = requests.Session()
+  session.verify = True
+  test = session.post(url=COMFY + '/prompt', data=data)
+  print(test)
 # ======================================================================
 
 # read workflow api data from file and convert it into dictionary 
