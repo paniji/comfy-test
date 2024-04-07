@@ -15,7 +15,7 @@ def queue_prompt(prompt_workflow):
     # Get the value of an environment variable
     COMFY = os.environ.get('COMFY')
 
-    print(COMFY)
+    print("Comfy URL", COMFY)
 
     p = {"prompt": prompt_workflow}
     data = json.dumps(p).encode('utf-8')
