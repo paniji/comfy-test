@@ -1,0 +1,15 @@
+temaplate:
+  movie_name: Remember
+  workflow: text2vid
+  project_name: project 
+  scenes:
+    - 1-intro
+    - 2-the-boy
+    - 3-dog-lost
+    - 4-search-plan
+    - 5-the-journey
+    - 6-gateway-1
+    - 7-gateway-2
+    - 8-gateway-3
+    - 9-the-reunion
+    - 10-the-end

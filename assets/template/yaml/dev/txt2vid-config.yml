@@ -1,0 +1,41 @@
+txt2vid:
+  '3': 
+    #name: PositivePromt
+    text: ''
+  '6': 
+    #name: NegativePrompt
+    text: ''
+  '7':
+    #name: KSampler
+    steps: 30
+    cfg: 7.5
+    sampler_name: euler_ancestral
+    scheduler: normal
+    denoise: 1
+  '94':
+    #name: ContextOptions
+    context_length: 16
+    context_stride: 1
+    context_overlap: 4
+  '100':
+    #name: EmptyLatentImage
+    width: 1000
+    height: 512
+    batch_size: 26
+  '101':
+    #name: VideoCombine
+    frame_rate: 8
+    loop_count: 0
+    filename_prefix: test/AnimateDiff
+    format: video/h264-mp4
+    pix_fmt: yuv420p
+    crf: 19
+  '102':
+    #name: CheckpointLoader
+    ckpt_name: wildcardxXLANIMATION.safetensors
+  '103':
+    #name: LoraLoader
+    lora_name: Dreamyvibes artstyle SDXL - Trigger with dreamyvibes artstyle.safetensors
+
+
+

@@ -1,0 +1,4 @@
+txt2vid:
+  dir: workflow
+  workflow: txt2vid.yml
+  properties: template.yml
