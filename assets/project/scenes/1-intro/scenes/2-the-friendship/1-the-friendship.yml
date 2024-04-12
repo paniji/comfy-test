@@ -1,0 +1,6 @@
+positive_prompt: >-
+  Envision a scene where a little girl is walking on the streets,
+  A radiant dreamyvibes artstyle moonlight bathes an old cobblestone
+  village, its chimneys puffing gentle smoke
+negative_prompt: >-
+length_in_secs: 10

@@ -1,15 +1,27 @@
-temaplate:
-  movie_name: Remember
-  workflow: text2vid
-  project_name: project 
-  scenes:
-    - 1-intro
-    - 2-the-boy
-    - 3-dog-lost
-    - 4-search-plan
-    - 5-the-journey
-    - 6-gateway-1
-    - 7-gateway-2
-    - 8-gateway-3
-    - 9-the-reunion
-    - 10-the-end
+# scenes:
+#   - 1-the-girl
+#   - 2-the-friendship
+pre_positive_prompt: >-
+  (Masterpiece, best quality:1.2), close up, happy face, same cloth,
+  consistent background, clear face details Natural light, A radiant
+  dreamyvibes artstyle moonlight bathes an old cobblestone village, its
+  chimneys puffing gentle smoke, sharp, highly detailed, ultra hyper
+  realistic, 4K, vibrant, Envision a scene where a little girl is walking on
+  the streets, pixar style, its chimneys puffing gentle smoke,
+
+post_positive_prompt: >-
+  high quality, 4K, pixar character, pixar style, (best quality), (masterpiece), 
+  (best lighting), (high detailed skin:1.0),( detailed eyes), 8k uhd, dslr, soft
+  lighting, best quality, film grain, Fujifilm XT3
+
+pre_negative_prompt: >-
+  (bad quality, worst quality:1.2), NSFW, nude, noisy, blurry, deformed,
+  black and white, bad anatomy, Deformed, bad eyes, crossed eyes,
+  disfigured, poorly drawn face, mutation, ((extra limb)), ugly, poorly
+  drawn hands, missing limb, floating limbs, disconnected limbs, malformed
+  hands, out of focus, long neck, long body, ((((mutated hands and
+  fingers)))), (((out of frame))), cropped, low-res, ugly, too many fingers,
+  grainy, extra limbs, extra fingers, mutated hands, bad proportions, blind,
+  ugly eyes, text, writing, logo
+
+post_negative_prompt: >-
