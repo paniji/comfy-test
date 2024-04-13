@@ -1,0 +1,11 @@
+---
+txt2img:
+  '4':
+    ckpt_name: wildcardxXLANIMATION.safetensors
+  '5':
+    width: 1080
+    height: 512
+  '9':
+    filename_prefix: ComfyUI
+  '10':
+    lora_name: Dreamyvibes artstyle SDXL - Trigger with dreamyvibes artstyle.safetensors

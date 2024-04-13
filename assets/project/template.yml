@@ -1,5 +1,5 @@
 movie_name: Remember
-workflow: text2vid
+#workflow: text2vid
 project_name: project 
 scenes:
   - 1-intro
@@ -17,7 +17,7 @@ pre_positive_prompt: >-
   (Masterpiece, best quality:1.2), close up, happy face, same cloth,
   consistent background, clear face details, Natural light, sharp, 
   highly detailed, ultra hyper, realistic, 4K, vibrant, pixar style, 
-  its chimneys puffing gentle smoke,
+  
 post_positive_prompt: >-
   high quality, 4K, pixar character, pixar style, (best quality), (masterpiece), 
   (best lighting), (high detailed skin:1.0),( detailed eyes), 8k uhd, dslr, soft
@@ -45,4 +45,14 @@ txt2vid:
   '101':
     #name: VideoCombine
     frame_rate: 8
+    filename_prefix: remember
+
+txt2img: 
+  '6': 
+    #name: PositivePromt
+    text: ''
+  '7': 
+    #name: NegativePrompt
+    text: ''
+  '9':
     filename_prefix: remember

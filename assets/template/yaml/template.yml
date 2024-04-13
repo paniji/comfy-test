@@ -2,3 +2,5 @@ txt2vid:
   dir: workflow
   workflow: txt2vid.yml
   properties: template.yml
+txt2img:
+  workflow: txt2img.yml

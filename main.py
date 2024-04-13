@@ -9,7 +9,8 @@ import requests
 
 import assets.utils as utils
 
-utils.prompt_workflow("txt2vid")
+WF = os.environ.get('WF')
+utils.prompt_workflow(WF)
 # # ======================================================================
 # # This function sends a prompt workflow to the specified URL 
 # # (http://127.0.0.1:8188/prompt) and queues it on the ComfyUI server
